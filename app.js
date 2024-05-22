@@ -22,15 +22,15 @@ http.createServer((request, response)=>{
             switch(extension){
                 case 'txt':
                     response.writeHead(200,{"Content-Type":"text/plain"});
-
                     break;
+
                 case 'html':
                     response.writeHead(200,{"Content-Type":"text/html"});
-                break;
+                    break;
 
                 case 'png':
                     response.writeHead(200,{"Content-Type":"image/png"});
-                break;
+                    break;
             }
             //El archivo seleccionado por medio de nuestra url es escrito en nuestra pagina, ya definido su tipo de archivo 
             response.write(data);
